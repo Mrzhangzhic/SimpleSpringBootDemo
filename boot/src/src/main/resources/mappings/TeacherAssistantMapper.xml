@@ -1,0 +1,20 @@
+<!--
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.zhangzhic.zzc.mapper.TeacherAssistantMapper" >
+  <resultMap id="BaseResultMap" type="com.example.zhangzhic.zzc.pojo.TeacherAssistant" >
+    &lt;!&ndash;
+      WARNING - @mbg.generated
+    &ndash;&gt;
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="teacher_assistant_name" property="teacherAssistantName" jdbcType="VARCHAR" />
+    <result column="belonging_press" property="belongingPress" jdbcType="VARCHAR" />
+    <result column="grade" property="grade" jdbcType="VARCHAR" />
+    <result column="semester" property="semester" jdbcType="INTEGER" />
+    <result column="author" property="author" jdbcType="VARCHAR" />
+    <result column="create_data_time" property="createDataTime" jdbcType="TIMESTAMP" />
+    <result column="create_user_id" property="createUserId" jdbcType="INTEGER" />
+    <result column="update_data_time" property="updateDataTime" jdbcType="TIMESTAMP" />
+    <result column="update_user_id" property="updateUserId" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>-->

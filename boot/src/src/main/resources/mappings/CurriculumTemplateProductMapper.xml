@@ -1,0 +1,30 @@
+<!--
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.zhangzhic.zzc.mapper.CurriculumTemplateProductMapper" >
+  <resultMap id="BaseResultMap" type="com.example.zhangzhic.zzc.pojo.CurriculumTemplateProduct" >
+    &lt;!&ndash;
+      WARNING - @mbg.generated
+    &ndash;&gt;
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="curriculum_template_id" property="curriculumTemplateId" jdbcType="INTEGER" />
+    <result column="class_plan_id" property="classPlanId" jdbcType="INTEGER" />
+    <result column="type" property="type" jdbcType="TINYINT" />
+    <result column="class_week" property="classWeek" jdbcType="VARCHAR" />
+    <result column="class_time" property="classTime" jdbcType="VARCHAR" />
+    <result column="teacher_assistant_id" property="teacherAssistantId" jdbcType="VARCHAR" />
+    <result column="level" property="level" jdbcType="TINYINT" />
+    <result column="total_chapter" property="totalChapter" jdbcType="TINYINT" />
+    <result column="curriculum_level_id" property="curriculumLevelId" jdbcType="INTEGER" />
+    <result column="purchase_validity_data" property="purchaseValidityData" jdbcType="TIMESTAMP" />
+    <result column="enable_try_look" property="enableTryLook" jdbcType="BIT" />
+    <result column="service_cycle" property="serviceCycle" jdbcType="INTEGER" />
+    <result column="equipment_name" property="equipmentName" jdbcType="VARCHAR" />
+    <result column="plan_class" property="planClass" jdbcType="OTHER" />
+    <result column="is_delete" property="isDelete" jdbcType="BIT" />
+    <result column="create_data_time" property="createDataTime" jdbcType="TIMESTAMP" />
+    <result column="create_user_id" property="createUserId" jdbcType="INTEGER" />
+    <result column="update_data_time" property="updateDataTime" jdbcType="TIMESTAMP" />
+    <result column="update_user_id" property="updateUserId" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>-->

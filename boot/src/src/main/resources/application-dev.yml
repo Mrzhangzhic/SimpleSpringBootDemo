@@ -1,0 +1,31 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: Chenggege
+    password: Xiaogege520!
+    url: jdbc:mysql://120.25.252.233:3306/woke?useUnicode=true
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  type-handlers-package: com.example.zhangzhic.zzc.config.MySqlJsonHandler
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.example.zhangzhic.mapper
+mapper:
+  mappers: com.example.zhangzhic.zzc.config.MyMapper
+  not-empty: false
+  identity: MYSQL
+#showSql
+#指定具体的mapper
+logging:
+  level:
+    com:
+      example:
+        zhangzhic:
+          zzc:
+            mapper : debug
+
+
+

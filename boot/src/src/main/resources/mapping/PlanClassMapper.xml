@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.zhangzhic.zzc.mapper.PlanClassMapper">
+  <resultMap id="BaseResultMap" type="com.example.zhangzhic.zzc.pojo.PlanClass">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="curriculum_template_product_id" jdbcType="INTEGER" property="curriculumTemplateProductId" />
+    <result column="day" jdbcType="INTEGER" property="day" />
+    <result column="start_class_time" jdbcType="TIMESTAMP" property="startClassTime" />
+    <result column="end_class_time" jdbcType="TIMESTAMP" property="endClassTime" />
+    <result column="is_delete" jdbcType="BIT" property="isDelete" />
+    <result column="create_data_time" jdbcType="TIMESTAMP" property="createDataTime" />
+    <result column="create_user_id" jdbcType="INTEGER" property="createUserId" />
+    <result column="update_data_time" jdbcType="TIMESTAMP" property="updateDataTime" />
+    <result column="update_user_id" jdbcType="INTEGER" property="updateUserId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, curriculum_template_product_id, `day`, start_class_time, end_class_time, is_delete,
+    create_data_time, create_user_id, update_data_time, update_user_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from plan_class
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from plan_class
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.example.zhangzhic.zzc.pojo.PlanClass" useGeneratedKeys="true">
+    insert into plan_class (curriculum_template_product_id, `day`,
+      start_class_time, end_class_time, is_delete,
+      create_data_time, create_user_id, update_data_time,
+      update_user_id)
+    values (#{curriculumTemplateProductId,jdbcType=INTEGER}, #{day,jdbcType=INTEGER},
+      #{startClassTime,jdbcType=TIMESTAMP}, #{endClassTime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=BIT},
+      #{createDataTime,jdbcType=TIMESTAMP}, #{createUserId,jdbcType=INTEGER}, #{updateDataTime,jdbcType=TIMESTAMP},
+      #{updateUserId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.example.zhangzhic.zzc.pojo.PlanClass" useGeneratedKeys="true">
+    insert into plan_class
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="curriculumTemplateProductId != null">
+        curriculum_template_product_id,
+      </if>
+      <if test="day != null">
+        `day`,
+      </if>
+      <if test="startClassTime != null">
+        start_class_time,
+      </if>
+      <if test="endClassTime != null">
+        end_class_time,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
+      <if test="createDataTime != null">
+        create_data_time,
+      </if>
+      <if test="createUserId != null">
+        create_user_id,
+      </if>
+      <if test="updateDataTime != null">
+        update_data_time,
+      </if>
+      <if test="updateUserId != null">
+        update_user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="curriculumTemplateProductId != null">
+        #{curriculumTemplateProductId,jdbcType=INTEGER},
+      </if>
+      <if test="day != null">
+        #{day,jdbcType=INTEGER},
+      </if>
+      <if test="startClassTime != null">
+        #{startClassTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endClassTime != null">
+        #{endClassTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=BIT},
+      </if>
+      <if test="createDataTime != null">
+        #{createDataTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null">
+        #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="updateDataTime != null">
+        #{updateDataTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUserId != null">
+        #{updateUserId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.zhangzhic.zzc.pojo.PlanClass">
+    update plan_class
+    <set>
+      <if test="curriculumTemplateProductId != null">
+        curriculum_template_product_id = #{curriculumTemplateProductId,jdbcType=INTEGER},
+      </if>
+      <if test="day != null">
+        `day` = #{day,jdbcType=INTEGER},
+      </if>
+      <if test="startClassTime != null">
+        start_class_time = #{startClassTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endClassTime != null">
+        end_class_time = #{endClassTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=BIT},
+      </if>
+      <if test="createDataTime != null">
+        create_data_time = #{createDataTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null">
+        create_user_id = #{createUserId,jdbcType=INTEGER},
+      </if>
+      <if test="updateDataTime != null">
+        update_data_time = #{updateDataTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUserId != null">
+        update_user_id = #{updateUserId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.zhangzhic.zzc.pojo.PlanClass">
+    update plan_class
+    set curriculum_template_product_id = #{curriculumTemplateProductId,jdbcType=INTEGER},
+      `day` = #{day,jdbcType=INTEGER},
+      start_class_time = #{startClassTime,jdbcType=TIMESTAMP},
+      end_class_time = #{endClassTime,jdbcType=TIMESTAMP},
+      is_delete = #{isDelete,jdbcType=BIT},
+      create_data_time = #{createDataTime,jdbcType=TIMESTAMP},
+      create_user_id = #{createUserId,jdbcType=INTEGER},
+      update_data_time = #{updateDataTime,jdbcType=TIMESTAMP},
+      update_user_id = #{updateUserId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,137 @@
+package com.example.zhangzhic.zzc.pojo;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+
+import java.io.Serializable;
+import java.util.Date;
+
+/**
+ * plan_class
+ * @author 
+ */
+@Data
+public class PlanClass implements Serializable {
+    /**
+     * id
+     */
+    private Integer id;
+
+    /**
+     * 产品形式id
+     */
+    private Integer curriculumTemplateProductId;
+
+    /**
+     * 1-7 代表周一到周日
+     */
+    private Integer day;
+
+    /**
+     * 上课时间
+     */
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "GMT+8")
+    private Date startClassTime;
+
+    /**
+     * 结束时间
+     */
+    @JsonFormat(pattern="yyyy-MM-dd hh:mm:ss",timezone = "GMT+8")
+    private Date endClassTime;
+
+    /**
+     * 0未删除，1删除
+     */
+    private Boolean isDelete;
+
+
+    private Date createDataTime;
+
+    private String createUserId;
+
+    private Date updateDataTime;
+
+    private String updateUserId;
+
+    private static final long serialVersionUID = 1L;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getCurriculumTemplateProductId() {
+        return curriculumTemplateProductId;
+    }
+
+    public void setCurriculumTemplateProductId(Integer curriculumTemplateProductId) {
+        this.curriculumTemplateProductId = curriculumTemplateProductId;
+    }
+
+    public Integer getDay() {
+        return day;
+    }
+
+    public void setDay(Integer day) {
+        this.day = day;
+    }
+
+    public Date getStartClassTime() {
+        return startClassTime;
+    }
+
+    public void setStartClassTime(Date startClassTime) {
+        this.startClassTime = startClassTime;
+    }
+
+    public Date getEndClassTime() {
+        return endClassTime;
+    }
+
+    public void setEndClassTime(Date endClassTime) {
+        this.endClassTime = endClassTime;
+    }
+
+    public Boolean getDelete() {
+        return isDelete;
+    }
+
+    public void setDelete(Boolean delete) {
+        isDelete = delete;
+    }
+
+    public Date getCreateDataTime() {
+        return createDataTime;
+    }
+
+    public void setCreateDataTime(Date createDataTime) {
+        this.createDataTime = createDataTime;
+    }
+
+    public String getCreateUserId() {
+        return createUserId;
+    }
+
+    public void setCreateUserId(String createUserId) {
+        this.createUserId = createUserId;
+    }
+
+    public Date getUpdateDataTime() {
+        return updateDataTime;
+    }
+
+    public void setUpdateDataTime(Date updateDataTime) {
+        this.updateDataTime = updateDataTime;
+    }
+
+    public String getUpdateUserId() {
+        return updateUserId;
+    }
+
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
+    }
+}

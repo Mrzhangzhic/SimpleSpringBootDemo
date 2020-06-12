@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.zhangzhic.zzc.mapper.CurriculumLevelMapper" >
+  <resultMap id="BaseResultMap" type="com.example.zhangzhic.zzc.pojo.CurriculumLevel" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="curriculum_template_product_id" property="curriculumTemplateProductId" jdbcType="INTEGER" />
+    <result column="parent_id" property="parentId" jdbcType="INTEGER" />
+    <result column="total_chapter" property="totalChapter" jdbcType="INTEGER" />
+    <result column="chapter_level" property="chapterLevel" jdbcType="INTEGER" />
+    <result column="level" property="level" jdbcType="TINYINT" />
+    <result column="chapter" property="chapter" jdbcType="VARCHAR" />
+    <result column="section" property="section" jdbcType="VARCHAR" />
+    <result column="small" property="small" jdbcType="VARCHAR" />
+    <result column="knowledge_points_id" property="knowledgePointsId" jdbcType="INTEGER" />
+    <result column="is_delete" property="isDelete" jdbcType="BIT" />
+    <result column="create_data_time" property="createDataTime" jdbcType="TIMESTAMP" />
+    <result column="create_user_id" property="createUserId" jdbcType="INTEGER" />
+    <result column="update_data_time" property="updateDataTime" jdbcType="TIMESTAMP" />
+    <result column="update_user_id" property="updateUserId" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

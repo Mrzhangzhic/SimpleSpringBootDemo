@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.zhangzhic.zzc.mapper.CurriculumTemplateMapper" >
+  <resultMap id="BaseResultMap" type="com.example.zhangzhic.zzc.pojo.CurriculumTemplate" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="template_name" property="templateName" jdbcType="VARCHAR" />
+    <result column="subject" property="subject" jdbcType="INTEGER" />
+    <result column="teacher_id" property="teacherId" jdbcType="INTEGER" />
+    <result column="difficulty" property="difficulty" jdbcType="TINYINT" />
+    <result column="semester" property="semester" jdbcType="TINYINT" />
+    <result column="teacher_numbers" property="teacherNumbers" jdbcType="BIT" />
+    <result column="apply_grade" property="applyGrade" jdbcType="VARCHAR" />
+    <result column="cover_id" property="coverId" jdbcType="INTEGER" />
+    <result column="min_student_numbers" property="minStudentNumbers" jdbcType="INTEGER" />
+    <result column="max_student_numbers" property="maxStudentNumbers" jdbcType="INTEGER" />
+    <result column="product_form_id" property="productFormId" jdbcType="INTEGER" />
+    <result column="class_start_date" property="classStartDate" jdbcType="TIMESTAMP" />
+    <result column="template_plant_numbers" property="templatePlantNumbers" jdbcType="INTEGER" />
+    <result column="total_class" property="totalClass" jdbcType="INTEGER" />
+    <result column="total_class_hours" property="totalClassHours" jdbcType="INTEGER" />
+    <result column="is_stop" property="isStop" jdbcType="BIT" />
+    <result column="is_delete" property="isDelete" jdbcType="BIT" />
+    <result column="create_data_time" property="createDataTime" jdbcType="TIMESTAMP" />
+    <result column="create_user_id" property="createUserId" jdbcType="INTEGER" />
+    <result column="update_data_time" property="updateDataTime" jdbcType="TIMESTAMP" />
+    <result column="update_user_id" property="updateUserId" jdbcType="INTEGER" />
+  </resultMap>
+</mapper>

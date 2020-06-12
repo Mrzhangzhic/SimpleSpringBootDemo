@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="jdbc.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.example.zhangzhic.zzc.mapper.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://120.25.252.233:3306/woke?useUnicode=true"
+                        userId="Chenggege"
+                        password="Xiaogege520!">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.example.zhangzhic.zzc.pojo" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mappings" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.example.zhangzhic.zzc.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="curriculum">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--<generatedKey column="id" sqlStatement="SELECT replace(uuid(),'-','')"/>-->
+            <!--<columnOverride column="id" property="id" />-->
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+    </context>
+</generatorConfiguration>
+
+
