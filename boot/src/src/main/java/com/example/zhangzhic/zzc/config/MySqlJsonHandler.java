@@ -33,6 +33,9 @@ public class MySqlJsonHandler<T> extends BaseTypeHandler<T> {
         return StringUtils.isBlank(data) ? null : JsonUtil.fromJson(data, (Class<T>) getRawType());
     }
 
+
+
+
     @Override
     public T getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
         String data = rs.getString(columnIndex);
